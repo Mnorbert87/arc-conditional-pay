@@ -1,0 +1,13 @@
+[project]
+name = "arc-conditional-pay"
+version = "0.1.0"
+description = "Hold a USDC payment on Arc until a milestone is verified by an agent or oracle, then release it. Deadlines, a required verifier, deny-on-expiry. Exposed as MCP tools."
+requires-python = ">=3.11"
+dependencies = ["httpx>=0.28.1", "mcp[cli]>=1.27.1", "eth-account>=0.13.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
